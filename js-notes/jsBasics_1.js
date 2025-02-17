@@ -5,7 +5,7 @@
 // console.log("Hello World!!");       // prints "Hello World!!"
 
 // VARIABLE DECLARATION using 'let' keyword
-// let a;      // create a vriable 'a' having value 'undefined' as no value set yet; 'undefined' is default value
+// let a;      // create a variable 'a' having value 'undefined' as no value set yet; 'undefined' is default value
 // console.log(typeof(a));     // typeof(x) and typeof x returns the type of the argument
 // console.log(a);
 
@@ -245,7 +245,7 @@
 // -----------------------------------------------------------------------------------------------------
 
 // STRINGS
-//        - can be defined using 'singke quotes', "double quotes", `backtick quotes`
+//        - can be defined using 'single quotes', "double quotes", `backtick quotes`
 
 // let single = 'single Quotes';
 // console.log(single);

@@ -8,7 +8,7 @@
 // Inorder to use a module, we need to require the module and hold it in a variable. Afterwards, use that variable
 // and use various methods implemented in the module.
 
-// FOR NOW, WE'LL FOCUS ON SYNC METHODS which works synchorously. ASYNC METHODS wil be used in LATER STAGES!!!
+// FOR NOW, WE'LL FOCUS ON SYNC METHODS which works synchorously. ASYNC METHODS will be used in LATER STAGES!!!
 
 // 1. MODULE : CHILD PROCESS
 // let cp = require("child_process");
