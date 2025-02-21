@@ -1,0 +1,58 @@
+/* Element selector - changes color for all <p> selectors */
+p {
+    color: blue;
+}
+
+/* Descendent selector - changes color of all <li> items of an <ol> list inside any <div> tag */
+div ol li {
+    color: blue;
+}
+
+div ol {
+    color: blue;
+}
+
+div li {
+    color: blue;
+}
+
+/* Children selector  - changes color of a span whose parent is a p and whose parent is a div */
+div > p > span {
+    color: blue;
+}
+
+/* Class selector - changes color of any item having class attribute : some-class */
+.some-class {
+    color: blue;
+}
+
+/* Multiple Classes on same item - changes color of item having multiple classes as attribute */
+/* no spacing between classes */
+.class1.class2 {
+    color: blue;
+}
+
+/* Descendent Classes - changes color of item whose attribute class is a descendent of another class */
+.class1 .class2 {
+    color: blue
+}
+
+/* Classes with children selector - changes color of item which is a direct child of another class*/
+.class1 > p {
+    color: blue;
+}
+
+/* ID selector - changes color of item whose id attribute : the-one */
+#the-one {
+    color: blue;
+}
+
+/* Attribute Selector - changes color of input item whose value attribute : Select me */
+input[value="Select me"] {
+    color: blue;
+}
+
+/* changes color of items which has multiple classes : c1 and c2 and who are direct children of item having id : the-one */
+#the-one > .c1.c2 {
+    color: black;
+}
