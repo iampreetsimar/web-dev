@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script>diffing algo lib url</script> -->
+    <!-- <script>reactDOM lib url</script> -->
+    <!-- <script>babel lib url</script> -->
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script>
+    // let root = document.getElementById("root");
+
+    // standard way to make changes in DOM
+    // let ele = document.createElement('h1');
+    // ele.innerHTML = "HELLO";
+    // console.log(ele);
+    // root.appendChild(ele);
+
+
+    // using react
+    // let ele = React.createElement('h1', {
+    //     children:['HELLO']
+    // })
+
+    // console.log(ele);
+    // root.appendChild(ele);  // gives an error since element created is a React element
+    // need to use ReactDOM to render react elements
+    // ReactDOM.render(ele, root);
+
+    // using react with JSX - will give an error -> need to add type="babel" to script tag
+    // This is a FUNCTIONAL COMPONENT
+    // props is argument passed Main - props is an object
+    // can use destructuring to direct get the property needed
+    // can add a default value as well
+    // also can be used in JSX
+    function Element({name='default', place='delhi'}) {
+        console.log(name);
+        console.log(place);
+        return (
+            <h1>HELLO {name} {place}</h1>
+        )
+    }
+
+    // reusability
+    function Main() {
+        // return (    // we see an error because return value must be a singular component
+        //     <Element/>
+        //     <Element/>
+        //     <Element/>
+        //     <Element/>
+        //     <Element/>
+        // )
+
+        // return (
+        //     <div>  
+        //         <Element/>
+        //         <Element/>
+        //         <Element/>
+        //         <Element/>
+        //         <Element/>
+        //     </div>
+        // )   // can wrap in div 
+
+
+        // or react provides a wrapper
+        return (
+            <React.Fragment>  
+                <Element name='Sam' place='India'/>     
+                <Element/>
+                <Element/>
+                <Element/>
+                <Element/>
+            </React.Fragment>
+        ) 
+    }
+
+    // Element component is being reused and each use is independent of the other.
+    ReactDOM.render(<Main/>, document.getElementById("root"));
+
+    // should not render multiple times, use render on one main wrapper and react does it job of rendering
+    // only the required parts
+    // if we do this, this will overwrite on earlier render
+    // ReactDOM.render(<Element/>, document.getElementById("root"));
+
+</script>
+</html>

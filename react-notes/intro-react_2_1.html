@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script></script>
+    <script></script>
+    <script></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script type="babel">
+    <!-- class components -->
+
+    // React class component
+    class Counter extends React.Component {
+        <!-- can define states(properties of component) in contructor -->
+        constructor() {     
+            super();    // we get class's 'this'
+            this.state = {
+                count : 0
+            }
+        }
+
+        increment = () => {
+            <!-- WRONG WAY -->
+            this.state.count += 1;      
+
+            <!-- use setState -->
+            this.setState({
+                count : this.state.count + 1
+            })
+            
+        }   
+
+        decrement = () => {
+            this.setState({
+                count : this.state.count - 1
+            })
+        }
+
+        <!-- can define functions as well -->
+        <!-- can write JSX in render's return -->
+        render() {
+            return (
+                <React.Fragment>
+                    <h1>{this.state.count}</h1>
+                    <button onClick={this.increment}>+</button>
+                    <button onClick={this.decrement}>-</button>
+                </React.Fragment>
+            )
+        }
+    }
+
+    ReactDOM.render(<Counter/>, document.getElementById("root"))
+
+</script>
+</html>
