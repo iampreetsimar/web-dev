@@ -37,7 +37,7 @@ ROUTING IN REACT
                  Eg. <Route path='' element = { <component /> } />
 
 
-        - To render multiple components for a singlee path, we can wrap the components in the element attribute of
+        - To render multiple components for a single path, we can wrap the components in the element attribute of
           <Route> tag
           eg. <Route path='/' exact element={ 
                 <>
